@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-09-2024 a las 01:43:23
+-- Tiempo de generación: 07-10-2024 a las 02:15:46
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `autores` (
   `id_autor` int(11) NOT NULL,
   `nombre_autor` varchar(200) NOT NULL,
-  `nombre_libro` varchar(300) NOT NULL,
-  `id_libro` int(11) NOT NULL
+  `nacimiento_autor` date NOT NULL,
+  `nacionalidad_autor` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -44,7 +44,8 @@ CREATE TABLE `libros` (
   `id_libro` int(11) NOT NULL,
   `nombre_libro` varchar(300) NOT NULL,
   `tipo` varchar(300) NOT NULL,
-  `nombre_autor` varchar(200) NOT NULL
+  `anio` int(11) NOT NULL,
+  `id_autor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -55,14 +56,14 @@ CREATE TABLE `libros` (
 -- Indices de la tabla `autores`
 --
 ALTER TABLE `autores`
-  ADD PRIMARY KEY (`id_autor`),
-  ADD KEY `id_libro` (`id_libro`);
+  ADD PRIMARY KEY (`id_autor`);
 
 --
 -- Indices de la tabla `libros`
 --
 ALTER TABLE `libros`
-  ADD PRIMARY KEY (`id_libro`);
+  ADD PRIMARY KEY (`id_libro`),
+  ADD KEY `id_autor` (`id_autor`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -85,10 +86,10 @@ ALTER TABLE `libros`
 --
 
 --
--- Filtros para la tabla `autores`
+-- Filtros para la tabla `libros`
 --
-ALTER TABLE `autores`
-  ADD CONSTRAINT `autores_ibfk_1` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `libros`
+  ADD CONSTRAINT `libros_ibfk_1` FOREIGN KEY (`id_autor`) REFERENCES `autores` (`id_autor`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
