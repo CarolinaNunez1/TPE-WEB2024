@@ -1,0 +1,52 @@
+
+nav{
+    background-color: rgb(177, 174, 174);
+    margin-bottom: 50px;
+}
+
+.titTabla{
+    background-color: rgb(177, 174, 174);
+}
+
+.infoLibro{
+    background-color: rgb(177, 174, 174);
+}
+
+footer{
+    background-color: rgb(177, 174, 174);
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.footer{
+    text-align: center;
+}
+
+.divError{
+    background-color: white;
+}
+.admin{
+    text-align: center;
+    background-color: white;
+}
+.divagrbook{
+    margin-left: 270px;
+    margin-right: 15px;
+}
+
+.pareditbook, .paragrbook{
+    background-color: rgb(177, 174, 174)al;
+    font-size: 22px;
+    color: black;
+}
+.formAgregar{
+    background-color: rgb(177, 174, 174);
+}
+
+.btnGuardarNuevoLib, .btnGuardarCambios{
+    text-align: end;
+    margin-top: 5px;
+    background-color: rgb(192, 178, 178);
+}

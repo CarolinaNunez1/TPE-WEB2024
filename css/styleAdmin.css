@@ -1,0 +1,61 @@
+
+nav{
+    background-color: black;
+    margin-bottom: 50px;
+}
+.datosUsuarioNav{
+    margin-top: 7px;
+    margin-right: 7px;
+}
+.titTabla{
+    background-color: black;
+}
+.infoLibro{
+    background-color: rgb(177, 174, 174);
+}
+footer{
+    background-color: rgb(177, 174, 174);
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.footer{
+    text-align: center;
+}
+.divError{
+    background-color: white;
+}
+.admin{
+    text-align: center;
+    background-color: white;
+}
+.pareditbook, .paragrbook, .paragrauth, .pareditauth{
+    background-color: rgb(177, 174, 174);
+    font-size: 22px;
+    color: white;
+}
+.titAgreLib{
+    text-align: center;
+}
+.formAgregar, .libAgregado{
+    background-color: rgb(177, 174, 174);
+}
+.agrNomNuevo{
+    margin-left: 95px;
+}
+.btnGuardarNuevoLib, .btnGuardarCambios, .btnGuardarNuevo{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: 10px;
+    border-color: rgb(177, 174, 174);
+    border-style: solid ;
+}
+.divBorrLib{
+    text-align: center;
+    background-color: rgb(177, 174, 174);
+}
+.btnVolverBorr:hover{
+    background-color: black;
+}
